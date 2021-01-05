@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+    Poc:
+        image: "rabbitmq:3-management"
+        hostname: "Poc"
+        environment:
+            RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+            RABBITMQ_DEFAULT_USER: "xavier"
+            RABBITMQ_DEFAULT_PASS: "bouvet"
+            RABBITMQ_DEFAULT_VHOST: "Zoo"
+        ports:
+            - "15672:15672"
+            - "5672:5672"
+        networks:
+            - poc
+        labels:
+            NAME: "Poc"
+networks:
+    poc:
+        external: true

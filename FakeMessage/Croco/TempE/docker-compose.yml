@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+    moke1:
+        image: "pcourbin/mock-data-generator:latest"
+        hostname: "moke1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 3600
+            SENZING_RECORDS_PER_SECOND: 1
+            SENZING_RABBITMQ_HOST: Poc
+            SENZING_RABBITMQ_PASSWORD: bouvet
+            SENZING_RABBITMQ_USERNAME: xavier
+            SENZING_RABBITMQ_QUEUE: croco
+            MIN_VALUE: 20
+            MAX_VALUE: 30
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"TempE","DATE":"date_now", "VALUE":"float"}'
+        tty: true
+        labels:
+            NAME: "moke1"
+        networks:
+            - poc
+networks:
+    poc:
+        external: true
