@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+    influxdb:
+        image: "influxdb"
+        hostname: "influxdb"
+        ports:
+            - "8086:8086"
+        networks:
+            - poc
+        labels:
+            NAME: "influxdb"
+    
+    influxdbchrono:
+        image: "chronograf"
+        hostname: "chronograf"
+        ports:
+            - "8087:8888"
+        networks:
+            - poc
+        labels:
+            NAME: "chronograf"
+        command: "--influxdb-url=http://influxdb:8086"
+networks:
+    poc:
+        external: true
