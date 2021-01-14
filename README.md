@@ -4,7 +4,7 @@ Developpement of a application/webservice
 #ATTENTION LES FICHIER SUIVANT SONT SOUS LEUR FORME POUR FONCTIONER SUR MON SYSTEME
 #TOUTES LES REFERENCE A LOCALHOST ON ETE REMPLACE PAR MON ADDRESSE IP (MERCI WINDOWS)
 
-Pour mettre en place le service RabbitMQ
+Pour mettre en place le service RabbitMQ\
   Lancer le docker-compose.yml présent dans le dossier RabbitMQ (docker-compose up)
 
 Pour créer vos queue lancer le scripte python
