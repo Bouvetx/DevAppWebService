@@ -14,8 +14,8 @@ Pour créer vos queue lancer le scripte python\
   
 
 Pour lancer l'ingestion 
-  Lancer le docker-compose.yml présent dans le dossier NiFi (docker-compose up)\
-  Pour acceder a l'interface de Nifi suivez le lien suivant http://localhost:8083/nifi/\
+Lancer le docker-compose.yml présent dans le dossier NiFi (docker-compose up)\
+  Pour acceder a l'interface de Nifi suivez le lien suivant http://localhost:8083/nifi/ \
   Importer le template Nifi2InfluxDB.xml présent dans le dossier NiFi\
   Changer les parametre dans le processus ConsumeAMQP\
     Queue : "le nom de la queue que vous avez créer"\
@@ -32,14 +32,14 @@ Pour lancer l'ingestion
 
 Pour lancer la base de donnée\
   editer la ligne\
-    command: "--influxdb-url=http://192.168.99.100:8086"\
+    command: "--influxdb-url=http://192.168.99.100:8086" \
   et remplacer la par \
-    command: "--influxdb-url=http://localhost:8086"\
+    command: "--influxdb-url=http://localhost:8086" \
   Lancer le docker-compose.yml présent dans le dossier influxdb (docker-compose up)
   
   
 Pour lancer la visualisation\
   Lancer le docker-compose.yml présent dans le dossier grafana (docker-compose up)\
-  Pour acceder a l'interface de Grafana suivez le lien suivant http://localhost:8084\
+  Pour acceder a l'interface de Grafana suivez le lien suivant http://localhost:8084 \
     Email or username : admin\
     Password : secret
