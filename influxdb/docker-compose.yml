@@ -19,7 +19,7 @@ services:
             - poc
         labels:
             NAME: "chronograf"
-        command: "--influxdb-url=http://influxdb:8086"
+        command: "--influxdb-url=http://192.168.99.100:8086"
 networks:
     poc:
         external: true
