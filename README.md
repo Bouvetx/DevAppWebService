@@ -43,3 +43,7 @@ Developpement of a application/webservice
   - Pour acceder a l'interface de Grafana suivez le lien suivant http://localhost:8084 \
     - Email or username : admin\
     - Password : secret
+  - Importer les différent dashboard
+  
+### Pour génerer des données
+  - Lancer le docker-compose présent dans l'un des sous-dossiers présent dans FakeMessage
