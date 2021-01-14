@@ -10,7 +10,7 @@ Developpement of a application/webservice
 
 
 ### Pour créer vos queues
-  - éditez la ligne
+  - dans le fichier RabbitMQ.py éditez la ligne
     - cl = Client('192.168.99.100:15672','xavier','bouvet')
   - et remplacez la par
     - cl = Client('localhost:15672','xavier','bouvet')
